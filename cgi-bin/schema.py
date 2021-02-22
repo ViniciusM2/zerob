@@ -1,5 +1,6 @@
 from marshmallow import Schema, fields
 
+
 class UserSchema(Schema):
     nome = fields.String()
     data_nascimento = fields.Date()

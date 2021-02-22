@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+
+<body>
+    <div class="center">
+        <h1>Pesquisar por um Usuário</h1>
+        <hr>
+
+        <form action="/cgi-bin/search_user.py" method="post">
+            Pesquisar Usuário pelo nome: <input type="text" name="nome"><br>
+            <input type="submit" value="Enviar">
+        </form>
+
+    </div>
+
+</body>
+
+</html>
+
+<style>
+    .texto {
+        color: mediumblue;
+        box-shadow: midnightblue;
+        /* text-align: center; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+</style>

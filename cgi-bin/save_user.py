@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import cgitb
 import cgi
 
@@ -5,7 +6,6 @@ from schema import UserSchema
 
 from datetime import date
 import os.path
-
 
 import json
 
@@ -71,36 +71,27 @@ print("""<html>
 # print("<h1>Confirmação de Dados</h1><hr>")
 print('<div class="center">')
 # print('<h2> Esses são mesmo os seus dados?</h2>')
-print('<table border=1>')
-print("""
-        <tr>
-         <th>Nome</th>
-         <th>Data de Nascimento</th>
-         <th>Email</th>
-         <th>Idade</th>
-         <th>Peso</th>
-         <th>Altura</th>
-        </tr>""")
-print("""<tr>
-         <td>{}</td>
-         <td>{}</td>
-         <td>{}</td>
-         <td>{}</td>
-         <td>{}</td>
-         <td>{}</td>
-        </tr>""".format(nome, data_nascimento, email, idade, peso, altura))
-print("</table>")
+# print('<table border=1>')
 # print("""
-#         <form action="cgi-bin/save.cgi" method="post">
-#             <input type="hidden" name="nome" value="{}"></input>
-#             <input type="hidden" name="data_nascimento" value="{}"></input>
-#             <input type="hidden" name="email" value="{}"></input>
-#             <input type="hidden" name="idade" value="{}"></input>
-#             <input type="hidden" name="peso" value="{}"></input>
-#             <input type="hidden" name="altura" value="{}"></input>
-#              <input type="submit" style="margin-top: 20px" value="confirmar"></input>
-#         </form>
-#        """.format(nome, data_nascimento, email, idade, peso, altura))
+#         <tr>
+#          <th>Nome</th>
+#          <th>Data de Nascimento</th>
+#          <th>Email</th>
+#          <th>Idade</th>
+#          <th>Peso</th>
+#          <th>Altura</th>
+#         </tr>""")
+# print("""<tr>
+#          <td>{}</td>
+#          <td>{}</td>
+#          <td>{}</td>
+#          <td>{}</td>
+#          <td>{}</td>
+#          <td>{}</td>
+#         </tr>""".format(nome, data_nascimento, email, idade, peso, altura))
+# print("</table>")
+print("""<h1>Você foi cadastrado no sistema com sucesso. Seja bem-vindo!<h1/>""")
+print('<a href="../index.html">Ir para menu principal</a>')
 # print("""<form action="/cgi-bin/save_user.py" method="post">
 #             <input type="submit" style="margin-top: 20px" value="confirmar"></input>
 #         </form>""")

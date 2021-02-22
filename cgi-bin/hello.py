@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-import cgitb, cgi
+import cgitb
+import cgi
 cgitb.enable(display=0, logdir="./")
 
 form = cgi.FieldStorage()
@@ -8,4 +9,4 @@ form = cgi.FieldStorage()
 nome = form.getvalue('nome')
 
 print("Content-type:text/html\r\n\r\n")
-print('Hello, ',nome)
+print('Hello, ', nome)
