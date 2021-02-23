@@ -32,18 +32,18 @@ print("""<html>
             </head>
             <body>""")
 
-print("<h1>Confirmação de Dados</h1><hr>")
+print("<h1>Data verification</h1><hr>")
 print('<div class="center">')
-print('<h2> Esses são mesmo os seus dados?</h2>')
+print('<h2> Is that really your data? </h2>')
 print('<table border=1>')
 print("""
         <tr>
-         <th>Nome</th>
-         <th>Data de Nascimento</th>
-         <th>Email</th>
-         <th>Idade</th>
-         <th>Peso</th>
-         <th>Altura</th>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Weight</th>
+        <th>Height</th>
         </tr>""")
 print("""<tr>
          <td>{}</td>

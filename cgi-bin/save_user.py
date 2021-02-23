@@ -90,8 +90,8 @@ print('<div class="center">')
 #          <td>{}</td>
 #         </tr>""".format(nome, data_nascimento, email, idade, peso, altura))
 # print("</table>")
-print("""<h1>Você foi cadastrado no sistema com sucesso. Seja bem-vindo!<h1/>""")
-print('<a href="../index.html">Ir para menu principal</a>')
+print("""<h1>You have been successfully registered in the system. Welcome!<h1/>""")
+print('<a href="../index.html">Back to index</a>')
 # print("""<form action="/cgi-bin/save_user.py" method="post">
 #             <input type="submit" style="margin-top: 20px" value="confirmar"></input>
 #         </form>""")

@@ -24,53 +24,90 @@ if os.path.exists('data.json'):
                 users = [data]
             elif isinstance(data, list):
                 users = data
+            else:
+                users = []
         except:
             print('does not have data')
+            users = []
+    print("Content-type:text/html\r\n\r\n")
+    print("""<html>
+                <head>
+                    <meta charset=\"UTF-8\">
+                    <title>Título</title>
+                </head>
+                <body>""")
 
+    print('<div class="center">')
+    print('<table border=1>')
+    print("""
+            <tr>
+            <th>Name</th>
+            <th>Date of Birth</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Weight</th>
+            <th>Height</th>
+            </tr>""")
+    for user in users:
+        print("""<tr>
+            <td>{}</td>
+            <td>{}</td>
+            <td>{}</td>
+            <td>{}</td>
+            <td>{}</td>
+            <td>{}</td>
+            </tr>""".format(user['nome'], user['data_nascimento'], user['email'], user['idade'], user['peso'], user['altura']))
+    print('<a href="../index.html">Back to index</a>')
+    print('</div>')
 
-print("Content-type:text/html\r\n\r\n")
-print("""<html>
-            <head>
-                <meta charset=\"UTF-8\">
-                <title>Título</title>
-            </head>
-            <body>""")
+    print("</table>")
 
-print('<div class="center">')
-print('<table border=1>')
-print("""
-        <tr>
-         <th>Nome</th>
-         <th>Data de Nascimento</th>
-         <th>Email</th>
-         <th>Idade</th>
-         <th>Peso</th>
-         <th>Altura</th>
-        </tr>""")
-for user in users:
-    print("""<tr>
-         <td>{}</td>
-         <td>{}</td>
-         <td>{}</td>
-         <td>{}</td>
-         <td>{}</td>
-         <td>{}</td>
-        </tr>""".format(user['nome'], user['data_nascimento'], user['email'], user['idade'], user['peso'], user['altura']))
-print('<a href="../index.html">Ir para menu principal</a>')
-print('</div>')
+    # print(form.keys())
+    # print(form.value)
 
-print("</table>")
+    print("</body></html>")
 
+    # estilos
 
-# print(form.keys())
-# print(form.value)
+    print("""
+    <style>
+    .texto {
+        color: mediumblue;
+        box-shadow: midnightblue;
+        /* text-align: center; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
 
-print("</body></html>")
+    .center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    </style>
+    """)
 
+else:
+    print("Content-type:text/html\r\n\r\n")
+    print("""<html>
+                <head>
+                    <meta charset=\"UTF-8\">
+                    <title>Título</title>
+                </head>
+                <body>""")
 
-# estilos
+    print('<div class="center">')
+    print('<h1>No users!</h1>')
+    print('<a href="../index.html">Back to index</a>')
+    print('</div>')
+    print('</body>')
 
-print("""
+    print("""
 <style>
 .texto {
     color: mediumblue;

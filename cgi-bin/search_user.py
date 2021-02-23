@@ -40,7 +40,7 @@ if(filtered_users):
     print("""<html>
                 <head>
                     <meta charset=\"UTF-8\">
-                    <title>Título</title>
+                    <title>Title</title>
                 </head>
                 <body>""")
     print('<div class="center">')
@@ -49,12 +49,12 @@ if(filtered_users):
     print('<table border=1>')
     print("""
             <tr>
-            <th>Nome</th>
-            <th>Data de Nascimento</th>
+            <th>Name</th>
+            <th>Date of Birth</th>
             <th>Email</th>
-            <th>Idade</th>
-            <th>Peso</th>
-            <th>Altura</th>
+            <th>Age</th>
+            <th>Weight</th>
+            <th>Height</th>
             </tr>""")
     for user in filtered_users:
         print("""<tr>
@@ -69,7 +69,7 @@ if(filtered_users):
     print('</div>')
 
     print("</table>")
-    print('<a style="margin-top: 5vh" href="../index.html">Ir para menu principal</a>')
+    print('<a style="margin-top: 5vh" href="../index.html">Back to index</a>')
     print('</div>')
 
     # print(form.keys())
